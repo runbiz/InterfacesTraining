@@ -1,0 +1,588 @@
+2020-08-27 09:35:03.4759 INFO 
+Returned all developers from database.
+
+2020-08-27 09:36:47.7779 INFO 
+Returned all developers from database.
+
+2020-08-27 09:36:59.1791 INFO 
+Returned all developers from database.
+
+2020-08-27 09:37:12.6529 INFO 
+Returned all developers from database.
+
+2020-08-27 09:38:50.6126 INFO 
+Returned all developers from database.
+
+2020-08-27 09:45:06.1542 INFO 
+Returned all developers from database.
+
+2020-08-27 09:46:14.3634 INFO 
+Returned all developers from database.
+
+2020-08-27 09:47:16.9823 INFO 
+Returned all developers from database.
+
+2020-08-27 09:48:56.4715 INFO 
+Returned all departments from database.
+
+2020-08-27 09:48:56.7394 INFO 
+Returned all developers from database.
+
+2020-08-27 09:49:10.3797 INFO 
+Returned all departments from database.
+
+2020-08-27 09:49:10.6631 INFO 
+Returned all developers from database.
+
+2020-08-27 09:54:32.3750 INFO 
+Returned all departments from database.
+
+2020-08-27 09:54:58.5504 INFO 
+Returned all departments from database.
+
+2020-08-27 09:54:58.8839 INFO 
+Returned all developers from database.
+
+2020-08-27 09:59:37.9080 INFO 
+Returned all departments from database.
+
+2020-08-27 09:59:38.1953 INFO 
+Returned all developers from database.
+
+2020-08-27 09:59:43.0969 INFO 
+Returned all developers from database.
+
+2020-08-27 09:59:43.9094 INFO 
+Returned all developers from database.
+
+2020-08-27 09:59:44.6569 INFO 
+Returned all developers from database.
+
+2020-08-27 09:59:45.8154 INFO 
+Returned all developers from database.
+
+2020-08-27 09:59:48.1253 INFO 
+Returned all developers from database.
+
+2020-08-27 10:00:16.3191 INFO 
+Returned all developers from database.
+
+2020-08-27 10:00:16.9961 INFO 
+Returned all developers from database.
+
+2020-08-27 10:00:18.2975 INFO 
+Returned all developers from database.
+
+2020-08-27 10:00:19.2041 INFO 
+Returned all developers from database.
+
+2020-08-27 10:00:24.2674 INFO 
+Returned all departments from database.
+
+2020-08-27 10:00:24.2674 INFO 
+Returned all departments from database.
+
+2020-08-27 10:00:24.4996 INFO 
+Returned all developers from database.
+
+2020-08-27 10:01:14.0413 INFO 
+Returned all departments from database.
+
+2020-08-27 10:01:14.0591 INFO 
+Returned all departments from database.
+
+2020-08-27 10:01:14.2835 INFO 
+Returned all developers from database.
+
+2020-08-27 10:01:30.1384 INFO 
+Returned all departments from database.
+
+2020-08-27 10:01:30.1575 INFO 
+Returned all departments from database.
+
+2020-08-27 10:01:30.4125 INFO 
+Returned all developers from database.
+
+2020-08-27 10:01:39.3828 INFO 
+Returned all departments from database.
+
+2020-08-27 10:01:39.3936 INFO 
+Returned all departments from database.
+
+2020-08-27 10:01:39.5373 INFO 
+Returned all developers from database.
+
+2020-08-27 10:01:45.9188 INFO 
+Returned all departments from database.
+
+2020-08-27 10:01:46.2067 INFO 
+Returned all developers from database.
+
+2020-08-27 10:01:48.0457 INFO 
+Returned all departments from database.
+
+2020-08-27 10:01:48.0649 INFO 
+Returned all departments from database.
+
+2020-08-27 10:01:48.3387 INFO 
+Returned all developers from database.
+
+2020-08-27 10:01:50.2781 INFO 
+Returned all departments from database.
+
+2020-08-27 10:01:50.5422 INFO 
+Returned all developers from database.
+
+2020-08-27 10:02:00.2134 INFO 
+Returned all departments from database.
+
+2020-08-27 10:02:00.2414 INFO 
+Returned all departments from database.
+
+2020-08-27 10:02:00.4686 INFO 
+Returned all developers from database.
+
+2020-08-27 10:02:02.6558 INFO 
+Returned all departments from database.
+
+2020-08-27 10:02:02.8763 INFO 
+Returned all developers from database.
+
+2020-08-27 10:15:05.2991 INFO 
+Returned all departments from database.
+
+2020-08-27 10:15:05.4991 INFO 
+Returned all developers from database.
+
+2020-08-27 10:15:16.1316 INFO 
+Returned all departments from database.
+
+2020-08-27 10:15:16.2898 INFO 
+Returned all developers from database.
+
+2020-08-27 10:19:01.8372 INFO 
+Returned all departments from database.
+
+2020-08-27 10:19:02.1874 INFO 
+Returned all developers from database.
+
+2020-08-27 10:21:06.8834 INFO 
+Returned all departments from database.
+
+2020-08-27 10:21:07.0506 INFO 
+Returned all developers from database.
+
+2020-08-27 10:22:01.5454 INFO 
+Returned all departments from database.
+
+2020-08-27 10:22:01.9165 INFO 
+Returned all developers from database.
+
+2020-08-27 10:24:44.2295 INFO 
+Returned all departments from database.
+
+2020-08-27 10:24:44.5219 INFO 
+Returned all developers from database.
+
+2020-08-27 10:28:31.0426 INFO 
+Returned all departments from database.
+
+2020-08-27 10:28:31.3582 INFO 
+Returned all developers from database.
+
+2020-08-27 10:31:23.9890 INFO 
+Returned all departments from database.
+
+2020-08-27 10:31:24.1176 INFO 
+Returned all developers from database.
+
+2020-08-27 10:36:01.3833 INFO 
+Returned all departments from database.
+
+2020-08-27 10:36:01.6644 INFO 
+Returned all developers from database.
+
+2020-08-27 10:47:07.3293 INFO 
+Returned all departments from database.
+
+2020-08-27 10:47:07.4539 INFO 
+Returned all developers from database.
+
+2020-08-27 10:50:08.6461 INFO 
+Returned all departments from database.
+
+2020-08-27 10:50:08.9153 INFO 
+Returned all developers from database.
+
+2020-08-27 10:54:21.8341 INFO 
+Returned all departments from database.
+
+2020-08-27 10:54:22.1184 INFO 
+Returned all developers from database.
+
+2020-08-27 11:04:59.2962 INFO 
+Returned all departments from database.
+
+2020-08-27 11:04:59.5359 INFO 
+Returned all developers from database.
+
+2020-08-27 11:06:08.9170 INFO 
+Returned all departments from database.
+
+2020-08-27 11:06:09.1503 INFO 
+Returned all developers from database.
+
+2020-08-27 11:07:06.0662 INFO 
+Returned all departments from database.
+
+2020-08-27 11:07:06.0821 INFO 
+Returned all departments from database.
+
+2020-08-27 11:07:06.2203 INFO 
+Returned all developers from database.
+
+2020-08-27 11:07:18.9138 INFO 
+Returned all departments from database.
+
+2020-08-27 11:07:19.0513 INFO 
+Returned all departments from database.
+
+2020-08-27 11:07:19.1915 INFO 
+Returned all developers from database.
+
+2020-08-27 11:50:53.0076 INFO 
+Returned all departments from database.
+
+2020-08-27 11:50:53.0276 INFO 
+Returned all departments from database.
+
+2020-08-27 11:50:53.1554 INFO 
+Returned all developers from database.
+
+2020-08-27 11:51:19.4607 INFO 
+Returned all departments from database.
+
+2020-08-27 11:51:19.4796 INFO 
+Returned all departments from database.
+
+2020-08-27 11:51:19.7206 INFO 
+Returned all developers from database.
+
+2020-08-27 11:52:12.3891 INFO 
+Returned all departments from database.
+
+2020-08-27 11:52:12.4113 INFO 
+Returned all departments from database.
+
+2020-08-27 11:52:12.6469 INFO 
+Returned all developers from database.
+
+2020-08-27 11:53:24.0137 INFO 
+Returned all departments from database.
+
+2020-08-27 11:53:24.0274 INFO 
+Returned all departments from database.
+
+2020-08-27 11:53:24.2546 INFO 
+Returned all developers from database.
+
+2020-08-27 11:53:29.6425 INFO 
+Developer Brandon Lewis was successfully updated.
+
+2020-08-27 11:53:40.7721 INFO 
+Returned all departments from database.
+
+2020-08-27 11:53:40.7896 INFO 
+Returned all departments from database.
+
+2020-08-27 11:53:41.0699 INFO 
+Returned all developers from database.
+
+2020-08-27 11:54:53.7224 INFO 
+Returned all departments from database.
+
+2020-08-27 11:54:53.8613 INFO 
+Returned all departments from database.
+
+2020-08-27 11:54:54.0419 INFO 
+Returned all developers from database.
+
+2020-08-27 11:54:58.5491 INFO 
+Developer Brandon Lewis was successfully updated.
+
+2020-08-27 11:55:00.9369 INFO 
+Returned all departments from database.
+
+2020-08-27 11:55:00.9562 INFO 
+Returned all departments from database.
+
+2020-08-27 11:55:01.1789 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:07.3096 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:07.3292 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:07.5490 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:08.6966 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:08.7095 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:08.9406 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:09.6450 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:09.6616 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:09.9340 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:10.8635 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:10.8768 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:11.1049 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:11.9698 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:11.9900 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:12.1969 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:13.9834 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:13.9987 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:16.0498 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:17.0071 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:17.0254 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:18.9775 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:19.9677 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:19.9815 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:21.9859 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:23.0028 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:23.0258 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:25.9657 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:27.9845 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:27.9964 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:29.9869 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:31.0538 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:31.0538 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:32.9600 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:33.9986 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:34.0353 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:36.9928 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:37.9992 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:38.0144 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:40.9630 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:41.8934 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:42.0103 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:42.1984 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:43.3012 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:43.3103 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:43.5619 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:48.2510 INFO 
+Developer Brandon Lewis was successfully updated.
+
+2020-08-27 12:04:48.8512 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:48.8692 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:49.1062 INFO 
+Returned all developers from database.
+
+2020-08-27 12:04:55.2330 INFO 
+Developer Brandon Lewis was successfully updated.
+
+2020-08-27 12:04:55.9417 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:55.9626 INFO 
+Returned all departments from database.
+
+2020-08-27 12:04:56.1644 INFO 
+Returned all developers from database.
+
+2020-08-27 12:05:08.5007 INFO 
+Developer test was successfully deleted.
+
+2020-08-27 12:05:09.1642 INFO 
+Returned all departments from database.
+
+2020-08-27 12:05:09.1809 INFO 
+Returned all departments from database.
+
+2020-08-27 12:05:09.4256 INFO 
+Returned all developers from database.
+
+2020-08-27 12:05:14.5034 INFO 
+Developer Test Developer was successfully deleted.
+
+2020-08-27 12:05:15.0774 INFO 
+Returned all departments from database.
+
+2020-08-27 12:05:15.0850 INFO 
+Returned all departments from database.
+
+2020-08-27 12:05:15.3152 INFO 
+Returned all developers from database.
+
+2020-08-27 12:05:18.9706 INFO 
+Developer Test Dev was successfully deleted.
+
+2020-08-27 12:05:19.6208 INFO 
+Returned all departments from database.
+
+2020-08-27 12:05:19.6464 INFO 
+Returned all departments from database.
+
+2020-08-27 12:05:19.8805 INFO 
+Returned all developers from database.
+
+2020-08-27 12:05:25.4842 INFO 
+Developer New Guy was successfully deleted.
+
+2020-08-27 12:05:26.0987 INFO 
+Returned all departments from database.
+
+2020-08-27 12:05:26.1187 INFO 
+Returned all departments from database.
+
+2020-08-27 12:05:26.3099 INFO 
+Returned all developers from database.
+
+2020-08-27 12:05:30.2775 INFO 
+Developer Megan was successfully deleted.
+
+2020-08-27 12:05:30.9540 INFO 
+Returned all departments from database.
+
+2020-08-27 12:05:30.9737 INFO 
+Returned all departments from database.
+
+2020-08-27 12:05:31.1610 INFO 
+Returned all developers from database.
+
+2020-08-27 12:05:38.7415 INFO 
+Developer Brandon Lewis was successfully updated.
+
+2020-08-27 12:05:39.4994 INFO 
+Returned all departments from database.
+
+2020-08-27 12:05:39.5137 INFO 
+Returned all departments from database.
+
+2020-08-27 12:05:39.7229 INFO 
+Returned all developers from database.
+
+2020-08-27 12:11:36.0564 INFO 
+Returned all departments from database.
+
+2020-08-27 12:11:36.3260 INFO 
+Returned all developers from database.
+
+2020-08-27 12:11:39.7285 INFO 
+Returned all departments from database.
+
+2020-08-27 12:11:39.7285 INFO 
+Returned all departments from database.
+
+2020-08-27 12:11:39.9770 INFO 
+Returned all developers from database.
+
+2020-08-27 12:12:39.0108 INFO 
+Developer Brandon Lewis was successfully updated.
+
+2020-08-27 12:12:39.7776 INFO 
+Returned all departments from database.
+
+2020-08-27 12:12:39.7983 INFO 
+Returned all departments from database.
+
+2020-08-27 12:12:40.0218 INFO 
+Returned all developers from database.
+
+2020-08-27 14:27:10.7517 INFO 
+Returned all departments from database.
+
+2020-08-27 14:27:10.7710 INFO 
+Returned all departments from database.
+
+2020-08-27 14:27:10.9816 INFO 
+Returned all developers from database.
+

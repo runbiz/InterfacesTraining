@@ -1,0 +1,87 @@
+﻿@page
+@model Interfaces.UI.Pages.Developer.ASPCore.IndexModel
+@{
+    ViewData["Title"] = "Developer ASP.NET Core Demo";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf
+@Html.AntiForgeryToken()
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Developer</h3>
+    </div>
+    <div class="card-body">
+        <div class="panel-wrapper">
+            @(Html.Kendo().PanelBar()
+                .Name("panel")
+                .ExpandMode(PanelBarExpandMode.Multiple)
+                .Items(pb =>
+                {
+                    pb.Add().Text("Add Developer")
+                    .Content(@<div class="form-wrapper container-fluid my-3">
+                                <form method="post" autocomplete="off">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-row">
+                                        <div class="form-group col col-md-3">
+                                            <label class="col-form-label" asp-for="Dev.Name"></label>
+                                            <input class="k-textbox form-control" asp-for="Dev.Name" />
+                                            <span class="text-danger" asp-validation-for="Dev.Name"></span>
+                                        </div>
+                                        <div class="form-group col col-md-4">
+                                            <label class="col-form-label" asp-for="Dev.Address"></label>
+                                            <input class="k-textbox form-control" asp-for="Dev.Address" />
+                                            <span class="text-danger" asp-validation-for="Dev.Address"></span>
+                                        </div>
+                                        <div class="form-group col col-md-2">
+                                            <label class="col-form-label" asp-for="Dev.DateOfBirth"></label>
+                                            <input class="form-control" asp-for="Dev.DateOfBirth" />
+                                            <span class="text-danger" asp-validation-for="Dev.DateOfBirth"></span>
+                                        </div>
+                                        <div class="form-group col col-md-3">
+                                            <label class="col-form-label" asp-for="Dev.DepartmentId"></label>
+                                            <input class="form-control" asp-for="Dev.DepartmentId" />
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <button type="submit" class="k-primary k-button">Create</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>);
+          })
+            )
+        </div>
+        <div class="table-wrapper">
+            @(Html.Kendo().Grid<Interfaces.Core.DTO.DeveloperDto>()
+                .Name("grid")
+                .Columns(col =>
+                {
+                    col.Bound(p => p.Name).Title("Name");
+                    col.Bound(p => p.DateOfBirth).Title("DOB").Format("{0:d}");
+                    col.Bound(p => p.Address).Title("Address");
+                    col.ForeignKey(p => p.Department.Id, ds => ds.Read(r => r.Url("/Developer/ASPCore/Index?handler=Departments")), "Id", "Name").Title("Department");
+                    col.Command(com =>
+                    {
+                        com.Edit();
+                        com.Destroy();
+                    });
+                })
+                .DataSource(ds => ds.Ajax()
+                    .ServerOperation(false)
+                    .Read(r => r.Url("/Developer/ASPCore/Index?handler=Developers").Type(HttpVerbs.Get))
+                    .Update(u => u.Url("/Developer/ASPCore/Index").Type(HttpVerbs.Put).Data("forgeryToken"))
+                    .Model(m => {
+                        m.Id(f => f.Id);
+                        m.Field(f => f.Id).Editable(false);
+                        //m.Field(f => f.Department).DefaultValue(1);
+                    })
+                    .PageSize(5)
+                )
+                .Editable(ed => ed.Mode(GridEditMode.PopUp))
+                .Pageable()
+            )
+        </div>
+    </div>
+</div>
