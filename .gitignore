@@ -338,3 +338,4 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/Interfaces.UI/logs/2020-08-28_logfile.txt

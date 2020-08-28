@@ -1,16 +1,18 @@
-﻿$(function () {
+﻿var departmentDS = new kendo.data.DataSource({
+    transport: {
+        read: {
+            url: '/Developer/jQuery/Index?handler=Departments',
+            type: 'GET',
+            dataType: 'json'
+        }
+    }
+});
+
+$(function () {
     $("#panel").kendoPanelBar();
     $("#Dev_DateOfBirth").kendoDatePicker();
     $("#Dev_DepartmentId").kendoDropDownList({
-        dataSource: {
-            transport: {
-                read: {
-                    url: '/Developer/jQuery/Index?handler=Departments',
-                    type: 'GET',
-                    dataType: 'json'
-                }
-            }
-        },
+        dataSource: departmentDS,
         dataTextField: "Name",
         dataValueField: "Id"
     });
@@ -63,18 +65,7 @@
             { field: "Name", title: "Name" },
             { field: "DateOfBirth", title: "DOB", format: "{0:d}" },
             { field: "Address", title: "Address" },
-            {
-                field: "Department.Id", title: "Department", dataTextField: "Name", dataValueField: "Id",
-                dataSource: {
-                    transport: {
-                        read: {
-                            url: "/Developer/jQuery/Index?handler=Departments",
-                            type: 'GET',
-                            dataType: 'json'
-                        }
-                    }
-                }
-            },
+            { field: "Department.Id", title: "Department", dataTextField: "Name", dataValueField: "Id", dataSource: departmentDS },
             { command: ["edit", "destroy"] }
         ],
         editable: {
