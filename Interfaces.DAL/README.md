@@ -164,7 +164,7 @@ public class DeveloperRepository : RepositoryBase<Developer>, IDeveloperReposito
 ```
 In the example above, we're just overriding the *'Name'* property and setting it to *"New Developer"*. Notice that we're still calling the **Create** method from the **RepositoryBase**. We are still free to use the generic method here, and we are just updating the model before we call it.
 
-Now that our repository has been updated, when we need to create a developer in our UI application, we can either call **Create**, which will create our developer as-is, or instead call our new method **CreateDeveloper**, which will override the *'Name'* property before creating the **Developer**.
+Now that our repository has been updated, when we need to create a developer in our UI application, we can either call **Create**, which will create our **Developer** entity as-is, or instead call our new method **CreateDeveloper**, which will override the *'Name'* property before creating the **Developer**.
 
 This has been a simple overview of how the repository pattern can be used to make CRUD operations easier and prevent repeating yourself, and also shows how beneficial repositories can be to make structured methods that are easy to read and use in our UI applications.
 
