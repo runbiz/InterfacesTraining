@@ -34,22 +34,22 @@ namespace Interfaces.UI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Configured in Extensions\ServiceExtensions.cs            
+            /********************** Configured in Extensions\ServiceExtensions.cs **********************/
+
+            // Configures the DbContext and ties it to the connection string in appsettings.json
             services.ConfigureDbContext(Configuration);
 
-            services.AddAutoMapper(typeof(MappingProfile));
+            // Adds any custom-built services to the application (ex. ILoggerManager, IRepositoryBase)
+            services.ConfigureCustomServices(Configuration);
 
-            // This adds the Logger service that uses NLog to save different log messages
-            services.AddSingleton<ILoggerManager, LoggerManager>();
+            // Adds AutoMapper to the application and binds our MappingProfile class to it 
+            services.ConfigureAutoMapper(Configuration);
 
-            // This adds our main Repository Wrapper that contains all our Data Access Layer repositories
-            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
+            // Adds Razor Pages, Controllers, and any other web-based services to the application
+            services.ConfigureWebServices(Configuration);
+            
+            /******************************************************************************************/
 
-            services
-            .AddControllersWithViews()
-            .AddJsonOptions(options =>
-                options.JsonSerializerOptions.PropertyNamingPolicy = null);
-            services.AddRazorPages();
             services.AddKendo();
         }
 
