@@ -12,15 +12,15 @@ For example, the **DeveloperDto** class is going to be the DTO used when loading
 
 ```csharp
 public class DeveloperDto  
-    {  
-        public Guid Id { get; set; }  
-        public string Name { get; set; }  
-        public DateTime DateOfBirth { get; set; }  
-        public string Address { get; set; }
-        public IEnumerable<AccountDto> Accounts { get; set; }
-        public int DepartmentId { get; set; }
-        public DepartmentDto Department { get; set; }
-    }
+{  
+    public Guid Id { get; set; }  
+    public string Name { get; set; }  
+    public DateTime DateOfBirth { get; set; }  
+    public string Address { get; set; }
+    public IEnumerable<AccountDto> Accounts { get; set; }
+    public int DepartmentId { get; set; }
+    public DepartmentDto Department { get; set; }
+}
 ```
 ```csharp
 public class Developer
@@ -51,25 +51,25 @@ In this example, the DTO and entity object are very similar, but there may be in
 Another example extends to the **DeveloperForCreationDto** class, which is used specifically for creating a new developer.
 ```csharp
 public class DeveloperForCreationDto
-    {
-        [Display(Name = "Name")]
-        [Required(ErrorMessage = "Name is required.")]
-        [StringLength(60, ErrorMessage = "Name can't be longer than 60 characters.")]
-        public string Name { get; set; }
+{
+    [Display(Name = "Name")]
+    [Required(ErrorMessage = "Name is required.")]
+    [StringLength(60, ErrorMessage = "Name can't be longer than 60 characters.")]
+    public string Name { get; set; }
 
-        [Display(Name = "Date of Birth")]
-        [Required(ErrorMessage = "Date of birth is required.")]
-        public DateTime DateOfBirth { get; set; }
+    [Display(Name = "Date of Birth")]
+    [Required(ErrorMessage = "Date of birth is required.")]
+    public DateTime DateOfBirth { get; set; }
 
-        [Display(Name = "Address")]
-        [Required(ErrorMessage = "Address is required.")]
-        [StringLength(100, ErrorMessage = "Address cannot be loner then 100 characters.")]
-        public string Address { get; set; }
+    [Display(Name = "Address")]
+    [Required(ErrorMessage = "Address is required.")]
+    [StringLength(100, ErrorMessage = "Address cannot be loner then 100 characters.")]
+    public string Address { get; set; }
 
-        // Relationships
-        [Display(Name = "Department")]
-        public int DepartmentId { get; set; }
-    }
+    // Relationships
+    [Display(Name = "Department")]
+    public int DepartmentId { get; set; }
+}
 ```
 As you can see above, this DTO does not include an *'Id'* property, as this is going to be a new record and will not have an ID. It also uses some data annotations to set up form validation for required fields and string lengths. Lastly, there is not an explicit relationship between **Developer** and **Department** in this DTO. There is only the *'DepartmentId'* property which will be used to set up the foreign key relationship on the entity class when adding the new developer.
 
@@ -83,22 +83,22 @@ DTOs are closely tied with the next topic, **AutoMapper**.
 In order to use AutoMapper correctly, we must set up what is known as a Profile. This is a class that inherits the **AutoMapper.Profile** class, and in the constructor of this class, we use the CreateMap extension to specify all of our AutoMapper mappings.
 ```csharp
 public class MappingProfile : Profile
+{
+    public MappingProfile()
     {
-        public MappingProfile()
-        {
-            CreateMap<Developer, DeveloperDto>();
-            CreateMap<DeveloperDto, Developer>()
-                .ForMember(m => m.Accounts, opt => opt.Ignore())
-                .ForMember(m => m.Department, opt => opt.Ignore())
-                .ForMember(m => m.DepartmentId, opt => opt.MapFrom(x => x.Department.Id));
-            CreateMap<DeveloperForCreationDto, Developer>();
-            CreateMap<DeveloperForUpdateDto, Developer>();
+        CreateMap<Developer, DeveloperDto>();
+        CreateMap<DeveloperDto, Developer>()
+            .ForMember(m => m.Accounts, opt => opt.Ignore())
+            .ForMember(m => m.Department, opt => opt.Ignore())
+            .ForMember(m => m.DepartmentId, opt => opt.MapFrom(x => x.Department.Id));
+        CreateMap<DeveloperForCreationDto, Developer>();
+        CreateMap<DeveloperForUpdateDto, Developer>();
 
-            CreateMap<Account, AccountDto>();
+        CreateMap<Account, AccountDto>();
 
-            CreateMap<Department, DepartmentDto>();
-        }
+        CreateMap<Department, DepartmentDto>();
     }
+}
 ```
 
 As you can see above, we are creating several maps to use in our application. Focusing on the Developer maps, we have one map that maps our **Developer** entity class into our **DeveloperDto** DTO class. We are also doing the opposite and mapping from our **DeveloperDto** DTO class to the **Developer** entity class, and this mapping includes some custom rules for mapping certain members of the **DeveloperDto** class to the **Developer** entity class. 

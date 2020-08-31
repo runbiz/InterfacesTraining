@@ -11,13 +11,13 @@ The **DAL** is made up of two sections:
 The **DAL** project implements a design pattern called the *Generic Repository Pattern*. What this means is that there is a generic repository interface/class that uses a generic Type<T> to build the contract.
 ```csharp
 public interface IRepositoryBase<T>
-    {
-        IQueryable<T> FindAll();
-        IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression);
-        void Create(T entity);
-        void Update(T entity);
-        void Delete(T entity);
-    }
+{
+    IQueryable<T> FindAll();
+    IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression);
+    void Create(T entity);
+    void Update(T entity);
+    void Delete(T entity);
+}
 ```
 As you can see above, the contract includes methods for CRUD operations using the generic type <T>, which we will pass our desired entity to in the implementation of the repository.
 
@@ -47,48 +47,48 @@ As you can see, our *IDeveloperRepository* contract sets up a series of entity-s
 ### DeveloperRepository.cs
 ```csharp
 public class DeveloperRepository : RepositoryBase<Developer>, IDeveloperRepository
+{
+    public DeveloperRepository(InterfacesContext interfacesContext) : base(interfacesContext)
     {
-        public DeveloperRepository(InterfacesContext interfacesContext) : base(interfacesContext)
-        {
-        }
-
-        public async Task<IEnumerable<Developer>> GetAllDevelopersAsync()
-        {
-            return await FindAll()
-                .OrderBy(ow => ow.Name)
-                .ToListAsync();
-        }
-
-        public async Task<IEnumerable<Developer>> GetAllDevelopersWithDetailsAsync()
-        {
-            return await FindAll()
-                .Include(d => d.Accounts)
-                .Include(d => d.Department)
-                .OrderBy(ow => ow.Name)
-                .ToListAsync();
-        }
-
-        public async Task<IEnumerable<Developer>> GetDevelopersByDepartmentAsync(int departmentId)
-        {
-            return await FindByCondition(d => d.DepartmentId.Equals(departmentId))
-                .Include(d => d.Department)
-                .ToListAsync();
-        }        
-
-        public async Task<Developer> GetDeveloperByIdAsync(Guid developerId)
-        {
-            return await FindByCondition(d => d.Id.Equals(developerId))
-                .FirstOrDefaultAsync();
-        }
-
-        public async Task<Developer> GetDeveloperWithDetailsAsync(Guid developerId)
-        {
-            return await FindByCondition(d => d.Id.Equals(developerId))
-                .Include(d => d.Accounts)
-                .Include(d => d.Department)
-                .FirstOrDefaultAsync();
-        }
     }
+
+    public async Task<IEnumerable<Developer>> GetAllDevelopersAsync()
+    {
+        return await FindAll()
+            .OrderBy(ow => ow.Name)
+            .ToListAsync();
+    }
+
+    public async Task<IEnumerable<Developer>> GetAllDevelopersWithDetailsAsync()
+    {
+        return await FindAll()
+            .Include(d => d.Accounts)
+            .Include(d => d.Department)
+            .OrderBy(ow => ow.Name)
+            .ToListAsync();
+    }
+
+    public async Task<IEnumerable<Developer>> GetDevelopersByDepartmentAsync(int departmentId)
+    {
+        return await FindByCondition(d => d.DepartmentId.Equals(departmentId))
+            .Include(d => d.Department)
+            .ToListAsync();
+    }        
+
+    public async Task<Developer> GetDeveloperByIdAsync(Guid developerId)
+    {
+        return await FindByCondition(d => d.Id.Equals(developerId))
+            .FirstOrDefaultAsync();
+    }
+
+    public async Task<Developer> GetDeveloperWithDetailsAsync(Guid developerId)
+    {
+        return await FindByCondition(d => d.Id.Equals(developerId))
+            .Include(d => d.Accounts)
+            .Include(d => d.Department)
+            .FirstOrDefaultAsync();
+    }
+}
 ```
 As you can see, our *DeveloperRepository* class implements both our *IDeveloperRepository* contract as well as our abstract *RepositoryBase* class, giving our repository access to all of the generic methods provided by the base class. A good example of this is in the **GetDevelopersByDepartmentAsync** Task. This is an async Task that returns a list of **Developers** where their *'DepartmentId'* matches the *departmentId* parameter. In this method, we are accessing the **FindByCondition** method of the *RepositoryBase*, which accepts an expression. We are passing the expression as a *LINQ* query, and after it returns all entities that match the condition, we use **EF** to include our foreign **Department** entities, then return a List. This code is very clean and readable, and this extends to the other Tasks in our repository. The idea here is that as new actions are needed, we add them to our repository/contract and will access them through our *UI*, keeping all data access logic here, rather than in our front-end application.
 
@@ -97,70 +97,69 @@ You may have noticed that our **DeveloperRepository** does not include any metho
 ### IDeveloperRepository.cs
 ```csharp
 public interface IDeveloperRepository : IRepositoryBase<Developer>
-    {
-        Task<IEnumerable<Developer>> GetAllDevelopersAsync();
-        Task<IEnumerable<Developer>> GetAllDevelopersWithDetailsAsync();
-        Task<IEnumerable<Developer>> GetDevelopersByDepartmentAsync(int departmentId);
-        Task<Developer> GetDeveloperByIdAsync(Guid developerId);
-        Task<Developer> GetDeveloperWithDetailsAsync(Guid developerId);
+{
+    Task<IEnumerable<Developer>> GetAllDevelopersAsync();
+    Task<IEnumerable<Developer>> GetAllDevelopersWithDetailsAsync();
+    Task<IEnumerable<Developer>> GetDevelopersByDepartmentAsync(int departmentId);
+    Task<Developer> GetDeveloperByIdAsync(Guid developerId);
+    Task<Developer> GetDeveloperWithDetailsAsync(Guid developerId);
         
-        // Here is my new action for creating a Developer. The Create method doesn't need to return anything, so it returns void.
-        void CreateDeveloper(Developer developer);
-        //****************************************
-    }
+    // Here is my new action for creating a Developer. The Create method doesn't need to return anything, so it returns void.
+    void CreateDeveloper(Developer developer);
+}
 ```
 Now that the **CreateDeveloper** action has been added to the contract, let's implement it in the **DeveloperRepository**.
 ```csharp
 public class DeveloperRepository : RepositoryBase<Developer>, IDeveloperRepository
+{
+    public DeveloperRepository(InterfacesContext interfacesContext) : base(interfacesContext)
     {
-        public DeveloperRepository(InterfacesContext interfacesContext) : base(interfacesContext)
-        {
-        }
-
-        public async Task<IEnumerable<Developer>> GetAllDevelopersAsync()
-        {
-            return await FindAll()
-                .OrderBy(ow => ow.Name)
-                .ToListAsync();
-        }
-
-        public async Task<IEnumerable<Developer>> GetAllDevelopersWithDetailsAsync()
-        {
-            return await FindAll()
-                .Include(d => d.Accounts)
-                .Include(d => d.Department)
-                .OrderBy(ow => ow.Name)
-                .ToListAsync();
-        }
-
-        public async Task<IEnumerable<Developer>> GetDevelopersByDepartmentAsync(int departmentId)
-        {
-            return await FindByCondition(d => d.DepartmentId.Equals(departmentId))
-                .Include(d => d.Department)
-                .ToListAsync();
-        }        
-
-        public async Task<Developer> GetDeveloperByIdAsync(Guid developerId)
-        {
-            return await FindByCondition(d => d.Id.Equals(developerId))
-                .FirstOrDefaultAsync();
-        }
-
-        public async Task<Developer> GetDeveloperWithDetailsAsync(Guid developerId)
-        {
-            return await FindByCondition(d => d.Id.Equals(developerId))
-                .Include(d => d.Accounts)
-                .Include(d => d.Department)
-                .FirstOrDefaultAsync();
-        }
-
-        // Here's my new method for creating the Developer. This is just a simple example, and we are just overriding the 'Name' property to "Test Developer".
-        public void CreateDeveloper(Developer developer)
-        {
-            developer.Name = "New Developer";
-            Create(developer);
-        }
     }
+
+    public async Task<IEnumerable<Developer>> GetAllDevelopersAsync()
+    {
+        return await FindAll()
+            .OrderBy(ow => ow.Name)
+            .ToListAsync();
+    }
+
+    public async Task<IEnumerable<Developer>> GetAllDevelopersWithDetailsAsync()
+    {
+        return await FindAll()
+            .Include(d => d.Accounts)
+            .Include(d => d.Department)
+            .OrderBy(ow => ow.Name)
+            .ToListAsync();
+    }
+
+    public async Task<IEnumerable<Developer>> GetDevelopersByDepartmentAsync(int departmentId)
+    {
+        return await FindByCondition(d => d.DepartmentId.Equals(departmentId))
+            .Include(d => d.Department)
+            .ToListAsync();
+    }        
+
+    public async Task<Developer> GetDeveloperByIdAsync(Guid developerId)
+    {
+        return await FindByCondition(d => d.Id.Equals(developerId))
+            .FirstOrDefaultAsync();
+    }
+
+    public async Task<Developer> GetDeveloperWithDetailsAsync(Guid developerId)
+    {
+        return await FindByCondition(d => d.Id.Equals(developerId))
+            .Include(d => d.Accounts)
+            .Include(d => d.Department)
+            .FirstOrDefaultAsync();
+    }
+
+    // Here's my new method for creating the Developer. This is just a simple example, and we are just overriding the 'Name' property to "Test Developer".
+    public void CreateDeveloper(Developer developer)
+    {
+        developer.Name = "New Developer";
+        Create(developer);
+    }
+}
 ```
 In the example above, we're just overriding the *'Name'* property and setting it to *"New Developer"*. Notice that we're still calling the **Create** method from the **RepositoryBase**. We are still free to use the generic method here, and we are just updating the model before we call it.
 
